@@ -21,7 +21,7 @@ test.describe("Filteri i sortiranje", () => {
         await page.waitForTimeout(500);
         await listaProizvodaPage.cijenaOd.pressSequentially("200");
         
-        await expect(listaProizvodaPage.cijenaProizvoda.first()).toContainText("268,52")
+        await expect(listaProizvodaPage.cijenaProizvoda.first()).toContainText("268,52");
     });
 
     test("Cijena-do filter i sortiranje po cijeni", async ({page}) => {

@@ -16,10 +16,10 @@ export class KosaricaPage {
         this.praznaKosarica = page.locator(".kosarica-list >> h2");
         this.kosaricaList = page.locator(".kosarica-list");
         this.kosaricaItem = page.locator(".kosarica-list >> li");
-        this.itemKolicina = page.locator(".kosarica-item kolicina mobile-off >> input[type='text']");
-        this.itemPlus = page.locator(".increase");
-        this.itemMinus = page.locator(".decrease");
-        this.itemDelete = page.locator(".remove-cart");
+        this.itemKolicina = page.locator('#cart-form').getByRole('textbox');
+        this.itemPlus = page.getByRole('button', { name: '+' });
+        this.itemMinus = page.getByRole('button', { name: '-' });
+        this.itemDelete = page.getByRole('button', { name: 'X' })
     }
 
 }
